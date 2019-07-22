@@ -44,6 +44,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           "ip" => ip,
           "hostname" => hostname
         }
+        client.vm.provision :shell, path: "provision_client_nodes/simple_service.sh", privileged: true
     end
   end
 end
